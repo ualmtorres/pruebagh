@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="author" content="Seminarios DI Febrero 2016"><title>AsciiDoc</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="reveal.js/css/theme/di.css" id="theme"><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script></head><body><div class="reveal"><div class="slides"><section><h1>AsciiDoc</h1><p><small>Seminarios DI Febrero 2016</small></p></section><section id="_asciidoc_ra_ra_rápido"><h2>AsciiDoc ra-ra-rápido</h2><div class="paragraph"><p><span class="image"><img src="./images/rapido.jpg" alt="rapido"></span></p></div></section>
+<section id="_ejemplos_asciidoc"><h2>Ejemplos AsciiDoc</h2><div class="paragraph"><p><a href="http://bdlsi.ual.es/seminariosdi201602/">Enlace a Seminarios DI http://bdlsi.ual.es/seminariosdi201602/</a></p></div>
+<div class="paragraph"><p><a href="http://bdlsi.ual.es/asciidoc/asciidoc-di-books/samples/MongoDBJava.html">Enlace a Ejemplo Asignatura Máster II http://bdlsi.ual.es/asciidoc/asciidoc-di-books/samples/MongoDBJava.html</a></p></div>
+<div class="paragraph"><p><a href="http://bdlsi.ual.es/seminariosdi201602/ejemplo.html">Enlace a Ejemplo a desarrollar http://bdlsi.ual.es/seminariosdi201602/ejemplo.html</a></p></div></section>
+<section id="_qué_es_asciidoc"><h2>Qué es AsciiDoc</h2><div class="quoteblock"><blockquote><div class="paragraph"><p>AsciiDoc is a text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs. AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, man page.</p></div></blockquote><div class="attribution">&#8212; http://www.methods.co.nz/asciidoc/</div></div></section>
+<section id="_y_es_texto_plano"><h2>Y es texto plano!!</h2><div class="paragraph"><p><span class="image"><img src="./images/alegria.jpg" alt="alegria"></span></p></div></section>
+<section id="_ventajas"><h2>Ventajas</h2><div class="ulist"><ul><li><p>Acabado profesional</p></li><li><p>Open Source</p></li><li><p>Tamaño reducido</p></li><li><p>Multiplataforma</p></li><li><p><strong>Control de versiones</strong></p></li><li><p><strong>Proyecto colaborativo</strong></p></li></ul></div></section>
+<section id="__para_qué"><h2>¿Para qué?</h2><div class="ulist"><ul><li><p>Texto y Presentaciones</p></li><li><p>Material generado con aspecto corporativo</p></li><li><p>Publicación automática al combinar con repositorios e integración contínua</p></li></ul></div></section>
+<section id="_vamos"><h2>Vamos!!</h2><div class="paragraph"><p><span class="image"><img src="./images/vamos.jpg" alt="vamos"></span></p></div></section>
+<section id="_material_de_ejemplo"><h2>Material de ejemplo</h2><div class="paragraph"><p><a href="https://github.com/ualmtorres/SeminariosDI201602/blob/master/01%20-%20Asciidoc/Ejemplo.doc">Descarga este ejemplo</a></p></div>
+<div class="ulist"><ul><li><p>Si estás en clase lo tienes en <code>Documents</code> en tu máquina virtual</p></li></ul></div></section>
+<section id="_cabecera_del_documento"><h2>Cabecera del documento</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>include::_settings_reveal.adoc[]
+
+= Slideshow Name
+Author Name
+:encoding: utf-8
+:lang: es
+:numbered:
+:imagesdir: ./images</code></pre></div></div></section>
+<section id="_títulos"><h2>Títulos</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>== Header Level 1
+
+Bla bla bla
+
+=== Header Level 2
+
+Bla bla bla
+
+==== Header Level 3
+
+Bla bla bla</code></pre></div></div></section>
+<section id="_resumen"><h2>Resumen</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>[abstract]
+
+El texto del abstract</code></pre></div></div></section>
+<section id="_código"><h2>Código</h2><div class="listingblock"><div class="content"><pre class="highlight"><code> [source]
+ ----
+ try {
+   Class.forName("com.mysql.jdbc.Driver");
+ }
+ catch(ClassNotFoundException e) {
+   System.out.println("Driver no encontrado");
+   System.exit(1);
+ }
+ ----
+----</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code> try {
+   Class.forName("com.mysql.jdbc.Driver");
+ }
+ catch(ClassNotFoundException e) {
+   System.out.println("Driver no encontrado");
+   System.exit(1);
+ }</code></pre></div></div></section>
+<section id="_tablas"><h2>Tablas</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>[cols="1,2,3", options="header"]
+.Using tables. **Caution: Numbers in header set the column width**
+|===
+|First
+|Second
+|Third
+
+|Item 1
+|Description 1
+|Extended description 1
+|===</code></pre></div></div>
+<table class="tableblock frame-all grid-all" style="width:100%"><caption class="title">Table 1. Using tables. <strong>Caution: Numbers in header set the column width</strong></caption><colgroup><col style="width:16%"><col style="width:33%"><col style="width:50%"></colgroup><thead><tr><th class="tableblock halign-left valign-top">First</th><th class="tableblock halign-left valign-top">Second</th><th class="tableblock halign-left valign-top">Third</th></tr></thead><tbody><tr><td class="tableblock halign-left valign-top"><p class="tableblock">Item 1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Description 1</p></td><td class="tableblock halign-left valign-top"><p class="tableblock">Extended description 1</p></td></tr></tbody></table></section>
+<section id="_negrita_cursiva_y_code_monospace_code"><h2>Negrita, cursiva y <code>monospace</code></h2><div class="listingblock"><div class="content"><pre class="highlight"><code>*Negrita*
+
+_Cursiva_
+
+`monospace`</code></pre></div></div></section>
+<section id="_imágenes"><h2>Imágenes</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>image::di.png[title = "Images are stored in `images` folder"]
+
+image::http://asciidoctor.org/images/octocat.jpg[title = "External image"]</code></pre></div></div></section>
+<section id="_listas_no_numeradas"><h2>Listas no numeradas</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>* item 1
+** item 1.2
+* item 2</code></pre></div></div>
+<div class="ulist"><ul><li><p>item 1</p><div class="ulist"><ul><li><p>item 1.2</p></li></ul></div></li><li><p>item 2</p></li></ul></div></section>
+<section id="_listas_numeradas"><h2>Listas numeradas</h2><div class="listingblock"><div class="content"><pre class="highlight"><code>. item 1
+.. item 1.1
+. item 2</code></pre></div></div>
+<div class="olist arabic"><ol class="arabic"><li><p>item 1</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>item 1.1</p></li></ol></div></li><li><p>item 2</p></li></ol></div></section>
+<section id="_referencia_rápida"><h2>Referencia rápida</h2><div class="ulist"><ul><li><p>AsciiDoc Quick Reference</p><div class="ulist"><ul><li><p><a href="http://asciidoctor.org/docs/asciidoc-syntax-quick-reference">http://asciidoctor.org/docs/asciidoc-syntax-quick-reference</a></p></li></ul></div></li><li><p>AsciiDoc Cheat sheet</p><div class="ulist"><ul><li><p><a href="https://powerman.name/doc/asciidoc">https://powerman.name/doc/asciidoc</a></p></li></ul></div></li><li><p>Awesome AsciiDoctor Notebook[<a href="http://gofile.me/2bnwZ/HmWfbCKX" class="bare">http://gofile.me/2bnwZ/HmWfbCKX</a>]</p></li></ul></div></section>
+<section id="_plantillas_di"><h2>Plantillas DI</h2><div class="ulist"><ul><li><p>Texto: <code><a href="https://github.com/ualmtorres/asciidoc-di-books" class="bare">https://github.com/ualmtorres/asciidoc-di-books</a></code></p></li><li><p>Slides: <code><a href="https://github.com/ualmtorres/asciidoc-di-slides" class="bare">https://github.com/ualmtorres/asciidoc-di-slides</a></code></p></li></ul></div></section>
+<section id="_y_el_próximo_día"><h2>Y el próximo día</h2><div class="paragraph"><p><span class="image"><img src="./images/branches.png" alt="branches"></span></p></div></section>
+<section id="__con_qué"><h2>¿Con qué?</h2><div class="paragraph"><p><span class="image"><img src="./images/git.jpg" alt="git"></span></p></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: false,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: true,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'di',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'default',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>

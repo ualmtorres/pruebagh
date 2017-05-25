@@ -1,0 +1,224 @@
+include::_settings_reveal.adoc[]
+
+= AsciiDoc
+Seminarios DI Febrero 2016
+:encoding: utf-8
+:lang: es
+:numbered:
+:imagesdir: ./images
+
+//// 
+GENERATE THE PRESENTATION WITH THIS COMMAND
+asciidoctor -T asciidoctor-reveal.js/templates/slim/  slide.adoc
+////
+
+== AsciiDoc ra-ra-rápido
+
+image:rapido.jpg[]
+
+== Ejemplos AsciiDoc
+
+http://bdlsi.ual.es/seminariosdi201602/[Enlace a Seminarios DI http://bdlsi.ual.es/seminariosdi201602/]
+
+http://bdlsi.ual.es/asciidoc/asciidoc-di-books/samples/MongoDBJava.html[Enlace a Ejemplo Asignatura Máster II http://bdlsi.ual.es/asciidoc/asciidoc-di-books/samples/MongoDBJava.html]
+
+http://bdlsi.ual.es/seminariosdi201602/ejemplo.html[Enlace a Ejemplo a desarrollar http://bdlsi.ual.es/seminariosdi201602/ejemplo.html]
+
+== Qué es AsciiDoc
+
+[quote,http://www.methods.co.nz/asciidoc/]
+____
+AsciiDoc is a text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs. AsciiDoc files can be translated to many formats including HTML, PDF, EPUB, man page.
+____
+
+== Y es texto plano!!
+
+image:alegria.jpg[]
+
+== Ventajas
+
+* Acabado profesional
+* Open Source
+* Tamaño reducido
+* Multiplataforma
+* *Control de versiones*
+* *Proyecto colaborativo*
+
+== ¿Para qué?
+
+* Texto y Presentaciones
+* Material generado con aspecto corporativo
+* Publicación automática al combinar con repositorios e integración contínua
+
+== Vamos!!
+
+image:vamos.jpg[]
+
+== Material de ejemplo
+
+https://github.com/ualmtorres/SeminariosDI201602/blob/master/01%20-%20Asciidoc/Ejemplo.doc[Descarga este ejemplo]
+
+* Si estás en clase lo tienes en `Documents` en tu máquina virtual
+
+== Cabecera del documento
+
+[source]
+----
+\include::_settings_reveal.adoc[]
+
+= Slideshow Name
+Author Name
+:encoding: utf-8
+:lang: es
+:numbered:
+:imagesdir: ./images
+----
+
+== Títulos
+
+```
+== Header Level 1
+
+Bla bla bla
+
+=== Header Level 2
+
+Bla bla bla
+
+==== Header Level 3
+
+Bla bla bla
+``` 
+
+== Resumen
+
+[source]
+----
+[abstract]
+
+El texto del abstract
+----
+
+== Código
+
+[source]
+ [source]
+ ----
+ try { 
+   Class.forName("com.mysql.jdbc.Driver"); 
+ } 
+ catch(ClassNotFoundException e) { 
+   System.out.println("Driver no encontrado"); 
+   System.exit(1); 
+ } 
+ ----
+----
+
+[source]
+----
+ try { 
+   Class.forName("com.mysql.jdbc.Driver"); 
+ } 
+ catch(ClassNotFoundException e) { 
+   System.out.println("Driver no encontrado"); 
+   System.exit(1); 
+ } 
+----
+== Tablas
+
+```
+[cols="1,2,3", options="header"] 
+.Using tables. **Caution: Numbers in header set the column width**
+|===
+|First
+|Second
+|Third
+
+|Item 1
+|Description 1
+|Extended description 1
+|===
+```
+
+[cols="1,2,3", options="header"] 
+.Using tables. **Caution: Numbers in header set the column width**
+|===
+|First
+|Second
+|Third
+
+|Item 1
+|Description 1
+|Extended description 1
+|===
+
+== Negrita, cursiva y `monospace`
+
+[source]
+----
+*Negrita*
+
+_Cursiva_
+
+`monospace`
+----
+
+== Imágenes
+
+[source]
+----
+image::di.png[title = "Images are stored in `images` folder"]
+
+image::http://asciidoctor.org/images/octocat.jpg[title = "External image"]
+----
+
+== Listas no numeradas
+
+```
+* item 1
+** item 1.2
+* item 2
+```
+* item 1
+** item 1.2
+* item 2
+
+== Listas numeradas
+
+```
+. item 1
+.. item 1.1
+. item 2
+```
+
+. item 1
+.. item 1.1
+. item 2
+
+== Referencia rápida
+
+* AsciiDoc Quick Reference
+** http://asciidoctor.org/docs/asciidoc-syntax-quick-reference[http://asciidoctor.org/docs/asciidoc-syntax-quick-reference]
+
+* AsciiDoc Cheat sheet
+** https://powerman.name/doc/asciidoc[https://powerman.name/doc/asciidoc]
+
+* Awesome AsciiDoctor Notebook[http://gofile.me/2bnwZ/HmWfbCKX]
+
+== Plantillas DI
+
+* Texto: `https://github.com/ualmtorres/asciidoc-di-books`
+
+* Slides: `https://github.com/ualmtorres/asciidoc-di-slides`
+
+== Y el próximo día
+
+image:branches.png[]
+
+== ¿Con qué?
+
+image:git.jpg[]
+
+
+
+
